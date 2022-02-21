@@ -22,7 +22,7 @@
     letter-spacing: 1px;
     text-decoration: none;
     background-color:crimson;
-    border-radius: 100px;
+    border-radius: 5px;
     white-space: nowrap;
     cursor: pointer;
     transition: 0.3s;
@@ -95,9 +95,9 @@ section {
     background-attachment: fixed;
 }
 
-.main .content {
-    /* max-width: 800px; */
-}
+/* .main .content {
+    max-width: 800px;
+} */
 
 .main .content .home-title{
     color:#fff;
@@ -340,4 +340,232 @@ section {
 .skills .react::before {
     width: 75%;
     background-color: #0051ff;
+}
+
+/* SERVICES */
+
+.services .content {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.title p {
+    width: 80%;
+}
+
+.services .content .card {
+    margin: 10px;
+    padding: 25px;
+    width: 300px;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    flex-direction: column;
+    border-radius:10px;
+    background:#fff;
+    box-shadow: 0 5px 25px rgba(1 1 1 /15%);
+}
+
+.services .card .card-icon {
+    font-size: 120px;
+    text-align: center;
+    color: crimson;
+    transition: transform .5s ease;
+}
+
+.services .card .card-icon:hover {
+    transform: translateY(-15px);
+}
+
+.services .card .info {
+    text-align: center;
+}
+
+.card-info-title {
+    margin: 10px;
+    font-size: 20px;
+    font-weight: 700;
+    color:crimson;
+}
+
+
+/* WORK */
+.work {
+    background:#000016;
+}
+
+.work .content {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap:wrap ;
+    justify-content: center;
+}
+
+.work .card {
+    margin: 15px;
+    width: 340px;
+}
+
+.work .content .card-img {
+    position: relative;
+    width: 100%;
+    height: 260px;
+    border-radius:10px;
+    overflow: hidden;
+}
+
+.work .content .card-img img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius:10px;
+    transition: transform .5s ease;
+}
+
+.work .content .card-img img:hover {
+    transform: scale(1.2);
+}
+
+/* CONTACT */
+
+.contact .content {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap:wrap ;
+    justify-content: center;
+}
+
+.contact .content .row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap:wrap ;
+    justify-content: center;
+}
+
+.contact .row .card {
+    margin: 20px;
+    padding: 25px;
+    width: 240px;
+    background:#fff;
+    border-radius: 10px;
+    box-shadow:0 5px 25px rgba(1 1 1 /15%);
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content: center;
+}
+
+.contact .row .card .contact-icon{
+    font-size: 60px;
+    color:crimson;
+    transition: transform .5s ease;
+}
+
+.contact .row .card:hover .contact-icon {
+    transform: translateY(-15px);
+}
+.contact .row .info {
+    text-align: center;
+}
+
+.contact .row .info h3 {
+    margin: 10px;
+    font-size: 20px;
+    font-weight: 700;
+    color:#111;
+}
+
+.contact .row .info span {
+    color:#666;
+    font-weight: 500;
+}
+
+.contact-form {
+    background:#fff;
+    max-width: 600px;
+    margin-top: 50px;
+    padding: 50px;
+    border-radius: 5px;
+    box-shadow:0 5px 25px rgba(1 1 1 /15%);
+}
+
+.contact-form h3 {
+    color:#111;
+    margin-bottom: 40px;
+    font-size: 25px;
+    font-weight: 600;
+    text-align: center;
+}
+.contact-form  .input-box {
+    position: relative;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.contact-form  .input-box input,
+.contact-form  .input-box textarea {
+    padding: 10px;
+    width: 100%;
+    font-size: 17px;
+    font-weight: 400;
+    outline: none;
+    border:1px solid #111;
+    border-radius:5px;
+    resize: none;
+    color: #111;
+}
+
+.contact-form  .input-box .send-btn {
+    width: 100%;
+    display: inline-block;
+    border:none;
+    font-size: 19px;
+    font-weight: 500;
+    color:#fff;
+    background:crimson;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: .5s ease;
+}
+
+.contact-form  .input-box .send-btn:hover {
+    background:#fff;
+    color:crimson;
+    border: 1px solid #111;
+}
+
+/* FOOTER */
+.footer {
+    padding: 34px;
+    text-align: center;
+    background:#000016;
+    color:#fff;
+}
+.footer .footer-title {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.footer p {
+    margin-top: 10px;
+}
+
+@media  (max-width : 1049px) {
+    header {
+        padding: 12px 20px;
+    }
+    
+    header .navigation {
+        display: none;
+    }
+
 }
