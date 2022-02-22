@@ -1,3 +1,6 @@
+
+
+   
  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;800;900&display=swap');
  
  * {
@@ -47,6 +50,10 @@ header {
     transition: 0.3s ease;
  }
 
+ header.sticky {
+    padding: 10px 100px;
+    background:crimson;
+}
 
 header .brand {
     color: #fff;
@@ -559,6 +566,42 @@ section {
     margin-top: 10px;
 }
 
+.scrolltoTop-btn {
+    z-index: 999;
+    position: fixed;
+    background-color: crimson;
+    color: #fff;
+    width: 45px;
+    height: 45px;
+    right: 0;
+    bottom: 10px;
+    font-size: 22px;
+    text-align: center;
+    line-height: 45px;
+    border-radius: 3px;
+    cursor: pointer;
+    opacity: 0;
+    transition: .4s all;
+}
+
+.scrolltoTop-btn.active {
+    right: 20px;
+    opacity: 1;
+}
+
+.reveal {
+    position: relative;
+    transform: translateY(50px);
+    opacity: 0;
+    transition: all 1.5s ease;
+}
+
+.reveal.active {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+
 @media  (max-width : 1049px) {
     header {
         padding: 12px 20px;
@@ -568,4 +611,115 @@ section {
         display: none;
     }
 
+    header.sticky{
+        padding: 10px 20px;
+        background:crimson;
+    }
+
+    header .navigation.active {
+        z-index: 888;
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 380px;
+        height: 100%;
+        background:#fff;
+        display: flex;
+        justify-content: center;
+        align-items:center;
+        flex-direction: column;
+        box-shadow: 0 5px 25px rgba(1 1 1 /15%);
+        transition: .3s ease;
+    }
+
+    header .navigation a {
+        margin: 10px;
+        padding: 0 20px;
+        color: gold;
+        font-size: 22px;
+        border-radius:20px;
+        transition: .3s ease;
+    }
+
+    header .navigation a:hover {
+       width: 100%;
+       text-align: center;
+       border-radius:0;
+       background-color: crimson;
+    }
+
+    .menu-btn {
+        position: absolute;
+        margin: 0 20px;
+        background: url('/images/menu-bar.png') no-repeat;
+        background-size: 30px;
+        background-position:center;
+        width: 40px;
+        height: 40px;
+        right: 0;
+        cursor: pointer;
+        transition: .4s ease;
+
+    }
+
+    .menu-btn.active {
+        background:url('/images/close-icon.png') no-repeat;
+        background-size:25px;
+        background-position:center;
+        z-index: 999;
+        transition: .3s ease;
+    }
+
+    section {
+        padding: 80px 20px;
+    }
+
+    .home .contact h2 {
+        font-size: 25px;
+    }
+
+    .home .contact h3 {
+        font-size: 35px;
+    }
+
+    .section-title {
+        font-size: 36px;
+    }
+
+    .about .content {
+        flex-direction: column;
+    }
+
+    .about .content .column {
+        position: relative;
+        width: 100%;
+    }
+
+    .about .content .col-right {
+        margin-top: 40px;
+    }
+
+    .skills .content {
+        flex-direction: column;
+    }
+
+    .skills .content .column {
+        position: relative;
+        width: 100%;
+    }
+
+    .skills .content .col-right {
+        margin-top: 40px;
+    }
+
+    .contact-form {
+        padding: 35px 40px;
+    }
+
+
 }
+
+
+
+
+
